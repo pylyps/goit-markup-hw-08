@@ -1,0 +1,129 @@
+.mob-menu-btn{
+
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  
+    margin-left: auto; 
+    z-index: 1000;
+    
+    @media screen and (min-width:768px) {
+        display: none;   
+    }
+
+}
+
+.mob-menu-burger{
+
+    transition: transform var(--animation);
+    .mob-menu-btn.is-open & {
+        opacity: 0;
+    }
+}
+
+.mob-menu-cls{
+
+    transition: transform var(--animation);
+    opacity: 0;
+
+    .mob-menu-btn.is-open & {
+        opacity: 1;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Mobile menu                                */
+/* -------------------------------------------------------------------------- */
+
+
+.mob-menu{
+    position: fixed;
+    top:0;
+    left: 0;
+    transform: translateX(100%);
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+
+
+    background-color: #fff;
+    z-index: 100;
+    transition: transform var(--animation);
+
+&.is-open {transform: translateX(0);}
+
+}
+
+.mob-menu__nav{
+    margin-bottom: auto;
+}
+
+
+.mob-menu__nav--link{
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #212121;}
+
+.mob-menu__nav--item:not(:last-child){
+    margin-bottom: 32px;}
+
+.menu_current{ color: 
+    rgba(33, 150, 243, 1);}
+
+.mob-menu__contact{margin-bottom: 64px;}
+
+.mob-menu__contact--link.mob-menu__tel{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #2196F3;
+}
+
+.mob-menu__contact--link{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16px;
+    letter-spacing: 0.02em;    
+    color: #757575;}
+
+.mob-menu_contact--item:not(:last-child){
+    margin-bottom: 32px;}
+
+.mob-menu__sm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.mob-menu__sm--link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #2196F3;
+}
+
+
+.mob-menu__sm--item:not(:last-child) .mob-menu__sm--link{
+    padding-right: 10px;
+    border-right: 1px solid 
+    rgba(33, 33, 33, 0.2);
+}

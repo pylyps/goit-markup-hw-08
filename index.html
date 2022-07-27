@@ -27,12 +27,62 @@
   <body data-body>
     <header class="header">
       <div class="container">
-        <!--Робимо верхню рамку-->
+        <!--Верхня рамка-->
 
         <nav class="nav">
+          
           <a class="logo" href="./index.html" rel="noopener nofollow noreferrer"
             >Web<span class="logo-span">Studio</span></a
           >
+      <!-- кнопка моб меню -->
+
+          <button class="mob-menu-btn" type="button" data-menu-button>
+            <svg class="mob-menu-icn" width="40" height="40">
+              <use class="mob-menu-burger" href="./images/icon.svg#mob-menu"></use>
+              <use class="mob-menu-cls" href="./images/icon.svg#mob-cls"></use>
+            </svg>
+          </button>
+
+      <!-- Мобільне меню -->
+
+      <div class="mob-menu" data-menu>
+        <ul class="mob-menu__nav li">
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link menu_current" href="">Студия</a>
+          </li>
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mob-menu__contact li">
+          <li class="mob-menu_contact--item">
+            <a class="mob-menu__contact--link mob-menu__tel link " href="">+38 096 111 11 11</a>
+          </li>
+          <li class="mob-menu_contact--item">
+            <a class="mob-menu__contact--link link" href=""> info@devstudio.com </a>
+          </li>
+        </ul>
+        <ul class="mob-menu__sm li">
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Instagram</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Twitter</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Facebook</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Навігація -->
+
           <ul class="nav-list">
             <li class="li">
               <a class="nav-list__item  nav-list__item--current" href="./index.html"
@@ -143,31 +193,34 @@
         <div class="container">
           <h2 class="head">Чем мы занимаемся</h2>
           <ul class="card-set li">
-            <li class="work__item card-set__item">
-              <img
-                src="./images/Coders1.jpg"
-                alt="Мы занимаемся кодингом"
-                width="370"
-                height="294"
-              />
+            <li class="work__item card-set__item catalog__item">
+              <picture>
+                <source  
+                media="(min-width: 1200px)"
+                srcset="./images/Work/work1.jpg 1x, ./images/Work/work1_@2x.jpg 2x"
+                type="image/jpg" />
+                <img src="./images/Work/work1_@2x.jpg" alt="Мы занимаемся кодингом" width="370" height="294" />             
+              </picture>
               <p class="work__desc">десктопные приложения</p>
             </li>
-            <li class="work__item card-set__item">
-              <img
-                src="./images/Phones2.jpg"
-                alt="Мы занимаемся настройкой телефонов"
-                width="370"
-                height="294"
-              />
+            <li class="work__item card-set__item catalog__item">
+              <picture>
+                <source  
+                media="(min-width: 1200px)"
+                srcset="./images/Work/work2.jpg 1x, ./images/Work/works2_@2x.jpg 2x"
+                type="image/jpg" />
+                <img src="./images/Work/works2_@2x.jpg" alt="Мы занимаемся кодингом" width="370" height="294" />             
+              </picture>
               <p class="work__desc">мобильные приложения</p>
             </li>
-            <li class="work__item card-set__item">
-              <img
-                src="./images/Raduga3.jpg"
-                alt="Мы делаем радугу"
-                width="370"
-                height="294"
-              />
+            <li class="work__item card-set__item catalog__item">
+              <picture>
+                <source  
+                media="(min-width: 1200px)"
+                srcset="./images/Work/work3.jpg 1x, ./images/Work/work3_@2x.jpg 2x"
+                type="image/jpg" />
+                <img src="./images/Work/work3_@2x.jpg" alt="Мы занимаемся кодингом" width="370" height="294" />             
+              </picture>
               <p class="work__desc">дизайнерские решения</p>
             </li>
           </ul>
@@ -179,14 +232,24 @@
         <div class="container">
           <h2 class="head">Наша команда</h2>
           <ul class="team__list li card-set">
-            <li class="card-set__item">
+            <li class="card-set__item catalog__item">
               <figure class="li">
-                <img
-                  src="./images/Igor2.jpg"
-                  alt="Фотография Игоря Демьяненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source  
+                  media="(min-width: 1200px)"
+                  srcset="./images/Team/team_lg01.jpg 1x, ./images/Team/team_lg01@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(min-width: 768px)"
+                  srcset="./images/Team/team_md01.jpg 1x, ./images/Team/team_md01@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(max-width: 767px)"
+                  srcset="./images/Team/team_sm01.jpg 1x, ./images/Team/team_sm01@2x.jpg 2x"
+                  type="image/jpg" />
+                  <img src="./images/Team/team_sm01.jpg" alt="Мы занимаемся кодингом" width="450" height="460" />             
+                </picture>
+               
                 <figcaption class="team__caption">
                   <h3 class="team__title">Игорь Демьяненко</h3>
                   <p lang="en" class="team__par">Product Designer</p>
@@ -243,14 +306,23 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item">
+            <li class="card-set__item catalog__item">
               <figure class="team-pic li">
-                <img
-                  src="./images/Olga2.jpg"
-                  alt="Фотография Ольги Репиной"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source  
+                  media="(min-width: 1200px)"
+                  srcset="./images/Team/team_lg02.jpg 1x, ./images/Team/team_lg02@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(min-width: 768px)"
+                  srcset="./images/Team/team_md02.jpg 1x, ./images/Team/team_md02@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(max-width: 767px)"
+                  srcset="./images/Team/team_sm02.jpg 1x, ./images/Team/team_sm02@2x.jpg 2x"
+                  type="image/jpg" />
+                  <img src="./images/Team/team_sm02.jpg" alt="Мы занимаемся кодингом" width="450" height="460" />             
+                </picture>
                 <figcaption class="team__caption">
                   <h3 class="team__title">Ольга Репина</h3>
                   <p lang="en" class="team__par">Frontend Developer</p>
@@ -307,14 +379,23 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item">
+            <li class="card-set__item catalog__item">
               <figure class="team-pic li">
-                <img
-                  src="./images/Nikolay2.jpg"
-                  alt="Фотография Николая Тарасова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source  
+                  media="(min-width: 1200px)"
+                  srcset="./images/Team/team_lg03.jpg 1x, ./images/Team/team_lg03@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(min-width: 768px)"
+                  srcset="./images/Team/team_md03.jpg 1x, ./images/Team/team_md03@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(max-width: 767px)"
+                  srcset="./images/Team/team_sm03.jpg 1x, ./images/Team/team_sm03@2x.jpg 2x"
+                  type="image/jpg" />
+                  <img src="./images/Team/team_sm03.jpg" alt="Мы занимаемся кодингом" width="450" height="460" />             
+                </picture>
                 <figcaption class="team__caption">
                   <h3 class="team__title">Николай Тарасов</h3>
                   <p lang="en" class="team__par">Marketing</p>
@@ -371,14 +452,23 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item">
+            <li class="card-set__item catalog__item">
               <figure class="team-pic li">
-                <img
-                  src="./images/Michail2.jpg"
-                  alt="Фотография Михаила Ермакова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source  
+                  media="(min-width: 1200px)"
+                  srcset="./images/Team/team_lg04.jpg 1x, ./images/Team/team_lg04@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(min-width: 768px)"
+                  srcset="./images/Team/team_md04.jpg 1x, ./images/Team/team_md04@2x.jpg 2x"
+                  type="image/jpg" />
+                  <source  
+                  media="(max-width: 767px)"
+                  srcset="./images/Team/team_sm04.jpg 1x, ./images/Team/team_sm04@2x.jpg 2x"
+                  type="image/jpg" />
+                  <img src="./images/Team/team_sm04.jpg" alt="Мы занимаемся кодингом" width="450" height="460" />             
+                </picture>
                 <figcaption class="team__caption">
                   <h3 class="team__title">Михаил Ермаков</h3>
                   <p lang="en" class="team__par">UI Designer</p>
@@ -538,7 +628,7 @@
               >Web<span class="logo-footer">Studio</span></a
             >
             <address class="address">
-              <ul class="li">
+              <ul class="li address-list">
                 <li class="address-phisic">г. Киев, пр-т Леси Украинки, 26</li>
                 <li class="address-digit mail">
                   <a class="navigation-address" href="mailto:info@example.com"
@@ -702,7 +792,13 @@
         </form>
       </div>
       <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
+
     </div>
+
+
+
+
   </body>
 </html>
 

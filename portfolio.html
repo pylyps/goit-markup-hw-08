@@ -23,15 +23,66 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+
+  <body data-body>
     <header class="header">
       <div class="container">
-        <!--Робимо верхню рамку-->
+        <!--Верхня рамку-->
 
         <nav class="nav">
           <a class="logo" href="./index.html" rel="noopener nofollow noreferrer"
             >Web<span class="logo-span">Studio</span></a
           >
+
+        <!-- кнопка моб меню -->
+
+        <button class="mob-menu-btn" type="button" data-menu-button>
+  <svg class="mob-menu-icn" width="40" height="40">
+    <use class="mob-menu-burger" href="./images/icon.svg#mob-menu"></use>
+    <use class="mob-menu-cls" href="./images/icon.svg#mob-cls"></use>
+  </svg>
+        </button>
+
+        <!-- Мобільне меню -->
+
+        <div class="mob-menu" data-menu>
+          <ul class="mob-menu__nav li">
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link" href="./index.html">Студия</a>
+          </li>
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link menu_current" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mob-menu__nav--item">
+            <a class="mob-menu__nav--link link" href="">Контакты</a>
+          </li>
+          </ul>
+          <ul class="mob-menu__contact li">
+          <li class="mob-menu_contact--item">
+            <a class="mob-menu__contact--link mob-menu__tel link " href="">+38 096 111 11 11</a>
+          </li>
+          <li class="mob-menu_contact--item">
+            <a class="mob-menu__contact--link link" href=""> info@devstudio.com </a>
+          </li>
+          </ul>
+          <ul class="mob-menu__sm li">
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Instagram</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Twitter</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">Facebook</a>
+          </li>
+          <li class="mob-menu__sm--item">
+            <a class="mob-menu__sm--link link" href="">LinkedIn</a>
+          </li>
+          </ul>
+        </div>
+
+        <!-- Навігація -->
+
           <ul class="nav-list">
             <li class="li">
               <a class="nav-list__item  " href="./index.html"
@@ -94,16 +145,24 @@
           </ul>
           <!-- Portfolio -->
           <ul class="li portfolio card-set">
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg01.jpg 1x, ./images/portfolio/portfolio_lg01@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md01.jpg 1x, ./images/portfolio/portfolio_md01@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm01.jpg 1x, ./images/portfolio/portfolio_sm01@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm01.jpg" alt="Технокряк" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -119,16 +178,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-1.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg2.jpg 1x, ./images/portfolio/portfolio_lg02@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md02.jpg 1x, ./images/portfolio/portfolio_md02@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm02.jpg 1x, ./images/portfolio/portfolio_sm02@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm02.jpg" alt="Постер New Orlean vs Golden Star" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -146,16 +213,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-2.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg3.jpg 1x, ./images/portfolio/portfolio_lg03@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md03.jpg 1x, ./images/portfolio/portfolio_md03@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm03.jpg 1x, ./images/portfolio/portfolio_sm03@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm03.jpg" alt="Ресторан Seafood" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -171,16 +246,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-3.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg4.jpg 1x, ./images/portfolio/portfolio_lg04@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md04.jpg 1x, ./images/portfolio/portfolio_md04@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm04.jpg 1x, ./images/portfolio/portfolio_sm04@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm04.jpg" alt="Проект Prime" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -196,16 +279,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-4.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg5.jpg 1x, ./images/portfolio/portfolio_lg05@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md05.jpg 1x, ./images/portfolio/portfolio_md05@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm05.jpg 1x, ./images/portfolio/portfolio_sm05@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm05.jpg" alt="Проект Boxes" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -221,17 +312,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    lang="en"
-                    src="./images/portfolio/img-5.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg6.jpg 1x, ./images/portfolio/portfolio_lg06@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md06.jpg 1x, ./images/portfolio/portfolio_md06@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm06.jpg 1x, ./images/portfolio/portfolio_sm06@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm06.jpg" alt="Inspiration has no Borders" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -247,16 +345,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-6.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg7.jpg 1x, ./images/portfolio/portfolio_lg07@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md07.jpg 1x, ./images/portfolio/portfolio_md07@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm07.jpg 1x, ./images/portfolio/portfolio_sm07@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm07.jpg" alt="Издание Limited Edition" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -272,16 +378,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    src="./images/portfolio/img-7.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg8.jpg 1x, ./images/portfolio/portfolio_lg08@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md08.jpg 1x, ./images/portfolio/portfolio_md08@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm08.jpg 1x, ./images/portfolio/portfolio_sm08@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm08.jpg" alt="Проект LAB" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -297,17 +411,24 @@
                 </figcaption>
               </figure>
             </li>
-            <li class="card-set__item portfolio-item">
+            <li class="card-set__item catalog__item portfolio-item">
               <figure class="li">
                 <div class="item overlay-container">
-                  <img
-                    class="portfolio-image"
-                    lang="en"
-                    src="./images/portfolio/img-8.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/portfolio_lg9.jpg 1x, ./images/portfolio/portfolio_lg09@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/portfolio_md09.jpg 1x, ./images/portfolio/portfolio_md09@2x.jpg 2x"
+                    type="image/jpg" />
+                    <source  
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/portfolio_sm09.jpg 1x, ./images/portfolio/portfolio_sm09@2x.jpg 2x"
+                    type="image/jpg" />
+                    <img src="./images/portfolio/portfolio_sm09.jpg" alt="Growing Business" width="450" height="294" />             
+                  </picture>
                   <div class="overlay">
                     <p class="desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -426,5 +547,7 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
+
   </body>
 </html>
