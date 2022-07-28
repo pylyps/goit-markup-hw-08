@@ -22,19 +22,25 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: var(--indent);
-    
+    margin-left: calc(-1 * var(--indent));
+    margin-bottom: calc(-1 * var(--indent));
+
     
 &__item{
+    flex-basis: calc(100% / var(--item-number) - var(--indent));
+    margin-left: var(--indent);
+    margin-bottom: var(--indent);
 
     @media screen and (min-width: 480px) {
-        --item-number: 1;
-        margin-bottom: 30px;
+        --item-number: 1;    
     }
-
-    flex-basis: calc((100% - var(--indent) * var(--item-number) - 1) / var(--item-number));
-  
-        }
+    @media screen and (min-width: 768px) {
+        --item-number: 2;    
+    }
+    @media screen and (min-width: 1200px) {
+        --item-number: 3;    
+    }
+    }
 }
     
    
@@ -94,8 +100,7 @@
     
     
     img{display: block;
-    // max-width: 100%;
-    width: 100%;
+    max-width: 100%;
     height:auto;
     } 
 

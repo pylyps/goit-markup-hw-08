@@ -34,7 +34,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: var(--indent);
+  margin-left: calc(-1 * var(--indent));
+  margin-bottom: calc(-1 * var(--indent));
 }
 @media screen and (min-width: 480px) {
   .card-set {
@@ -52,13 +53,24 @@
   }
 }
 .card-set__item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * var(--item-number) - 1) / var(--item-number));
-      flex-basis: calc((100% - var(--indent) * var(--item-number) - 1) / var(--item-number));
+  -ms-flex-preferred-size: calc(100% / var(--item-number) - var(--indent));
+      flex-basis: calc(100% / var(--item-number) - var(--indent));
+  margin-left: var(--indent);
+  margin-bottom: var(--indent);
 }
 @media screen and (min-width: 480px) {
   .card-set__item {
     --item-number: 1;
-    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-set__item {
+    --item-number: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__item {
+    --item-number: 3;
   }
 }
 
@@ -128,7 +140,7 @@ h1, h2, h3, h4, p {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -466,27 +478,38 @@ img {
           align-items: center;
 }
 .hero__header {
-  max-width: 650px;
   margin: 0 auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-button-prima);
 }
+@media screen and (min-width: 480px) {
+  .hero__header {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.61;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__header {
+    max-width: 650px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
 .hero.box {
   padding: 200px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/Hero/Hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/Hero/Hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./images/Hero/Hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero.jpg);
   background-size: cover;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero.box {
     padding: 200px 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/Hero/Hero_@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/Hero/Hero_@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./images/Hero/Hero_@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero_@2x.jpg);
     background-size: cover;
   }
 }
@@ -625,8 +648,24 @@ img {
   margin-bottom: 50px;
 }
 
-.team__list {
-  --item-number: 4;
+@media screen and (min-width: 480px) {
+  .team__list {
+    --item-number: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    --item-number: 2;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    --item-number: 4;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .team__caption {
@@ -694,40 +733,18 @@ img {
   }
 }
 @media screen and (min-width: 480px) {
-  .clients-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: var(--indent);
+  .clients-items {
+    --item-number: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients-items {
+    --item-number: 3;
   }
 }
 @media screen and (min-width: 1200px) {
-  .clients-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 30px;
-  }
-}
-.clients-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media screen and (min-width: 480px) {
   .clients-items {
-    --item-number: 2;
+    --item-number: 6;
   }
 }
 .clients-link {
@@ -741,7 +758,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   border-width: 1px;
-  width: 170px;
   height: 92px;
   border-style: solid;
   background-color: transparent;

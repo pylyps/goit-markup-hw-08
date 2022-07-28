@@ -194,16 +194,26 @@
     align-items: center;
     
     &__header {
-        max-width: 650px;
+       
         margin: 0 auto;
         
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+        font-weight: 900;      
         letter-spacing: 0.06em;
         text-transform: uppercase;
-    
         color: var(--color-button-prima);
+
+        @media screen and (min-width: 480px) {
+            max-width: 360px;
+            font-size: 26px;
+            line-height: 1.61; 
+        }
+            
+        @media screen and (min-width: 1200px) {
+            max-width: 650px;
+            font-size: 44px;
+            line-height: 1.36;
+          
+        }
     }
 
     &.box{
@@ -345,7 +355,7 @@
 
 
 // .card-set__item
-    .catalog__item{
+.catalog__item{
     background: #FFFFFF;
        
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -357,16 +367,28 @@
 .team-header{
     margin-bottom: 50px;}
     
-.team__list{--item-number: 4;
+.team__list{
+    
+    @media screen and (min-width: 480px) {
+        --item-number: 1;
     }
+    
+    @media screen and (min-width: 768px) {
+        --item-number: 2;
+        flex-wrap: wrap;
+    }
+        
+    @media screen and (min-width: 1200px) {
+        --item-number: 4;
+        flex-wrap: nowrap;
+    }
+}
     
 .team__caption{
     padding: 30px;
     background-color: var(--color-button-prima);
     }
     
-    
-
 // What we do
 
 .work-head{
@@ -454,34 +476,19 @@
      
      }
     }
-        
-    &-list{
-
-        @media screen and (min-width: 480px) {
-            
-            display: flex;
-            justify-content: center;
-            flex-wrap:wrap;
-            gap: var(--indent);
-            
-        }
-
-        @media screen and (min-width: 1200px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;}
-        }
+ 
         
     &-items{
-        display: flex;
-        
-        @media screen and (min-width: 480px){
-            --item-number: 2;
             
-            ;   
+        @media screen and (min-width: 480px){
+            --item-number: 2;             
         }
-
+        @media screen and (min-width: 768px){
+            --item-number: 3;             
+        }
+        @media screen and (min-width: 1200px){
+            --item-number: 6;             
+        }
         }
         
     &-link{
@@ -490,7 +497,7 @@
         align-items: center;
          
         border-width: 1px;
-        width: 170px;
+      
         height: 92px;
         border-style: solid;
         
