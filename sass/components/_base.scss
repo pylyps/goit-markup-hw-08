@@ -209,7 +209,7 @@
     &.box{
         padding: 200px 0;
     
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero.jpg);
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero.jpg);
         background-size: cover;
     }
     }
@@ -219,7 +219,7 @@
         (min-resolution: 2dppx){
             .hero.box{
             padding: 200px 0;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero_@2x.jpg);
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero_@2x.jpg);
             background-size: cover;
             }
   }
