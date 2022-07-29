@@ -500,16 +500,16 @@ img {
 }
 .hero.box {
   padding: 200px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./images/Hero/Hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Hero/Hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero.jpg);
   background-size: cover;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero.box {
     padding: 200px 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(./images/Hero/Hero_@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero_@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Hero/Hero_@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero_@2x.jpg);
     background-size: cover;
   }
 }
@@ -1196,16 +1196,16 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   border-radius: 4px;
   background-color: var(--color-button-prima);
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .modal {
     top: 41%;
-    min-width: 450px;
-    min-height: 609px;
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 .modal-head {
@@ -1235,7 +1235,7 @@ img {
           align-items: center;
   padding-bottom: 40px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .modal {
     padding: 0 40px;
   }
@@ -1251,6 +1251,11 @@ img {
           flex-direction: column;
   width: 448px;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .modal-label {
+    width: 370px;
+  }
 }
 .modal-desc {
   margin-bottom: 4px;

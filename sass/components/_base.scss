@@ -219,7 +219,7 @@
     &.box{
         padding: 200px 0;
     
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero.jpg);
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero.jpg);
         background-size: cover;
     }
     }
@@ -229,7 +229,7 @@
         (min-resolution: 2dppx){
             .hero.box{
             padding: 200px 0;
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/Hero/Hero_@2x.jpg);
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Hero_@2x.jpg);
             background-size: cover;
             }
   }
@@ -895,17 +895,17 @@
     transform: translate(-50%, -50%);
     top: 50%;
     
-    min-width: 528px;
-    min-height: 581px;
+    width: 450px;
+    height: 609px;
     border-radius: 4px;
     
     background-color: var(--color-button-prima);
 
-    @media screen and (max-width: 480px) {
+    @media screen and (min-width: 1200px) {
         top: 41%;
         
-        min-width: 450px;
-        min-height: 609px;
+        min-width: 528px;
+        min-height: 581px;
                 
     }
 
@@ -930,7 +930,7 @@
             
             padding-bottom: 40px;
                     }
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 768px) {
                 padding: 0 40px;
             }
             
@@ -940,6 +940,10 @@
             flex-direction: column;
             width: 448px;
             padding-bottom: 10px;
+
+            @media screen and (max-width: 768px) {
+                width: 370px;
+            }
             }
     &-desc{
             margin-bottom: 4px;
